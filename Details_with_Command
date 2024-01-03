@@ -1,0 +1,27 @@
+======== 7 type of networking in Docker ========
+
+1. Default bridge - given by default
+2. Custom/User define bridge - create own network for container
+3. Host network - without mapping port , directly hosted on local
+4. None - for isolated network without incoming/outgoing traffic
+5. Overlay - for multiple host connect
+6. MacVLAN - docker container connect with MAC address
+7. IPVLAN - connect with particular IP 
+
+## Docker Commands for network
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+## Connect Docker with specific network command
+
+docker run -d --network <network-name> --name ubuntu-2 ubuntu
